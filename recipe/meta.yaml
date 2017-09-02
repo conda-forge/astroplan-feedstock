@@ -1,7 +1,7 @@
 {% set name = "astroplan" %}
 {% set version = "0.3" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "eec6c517f46a881e9b24e53afca34b5313e11728739b8f2d32053775bb62befb" %}
+{% set hash_value = "2e49dcad66d81a4f0e80513bd0d1166c952bb8362f9841e1779d8a4bc2448422" %}
 
 package:
   name: '{{ name|lower }}'
