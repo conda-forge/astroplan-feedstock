@@ -1,5 +1,5 @@
 {% set name = "astroplan" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3" %}
 {% set hash_type = "sha256" %}
 {% set hash_value = "eec6c517f46a881e9b24e53afca34b5313e11728739b8f2d32053775bb62befb" %}
 
