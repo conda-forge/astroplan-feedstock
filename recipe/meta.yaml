@@ -36,6 +36,10 @@ test:
 about:
   home: https://github.com/astropy/astroplan
   license: BSD 3-clause
+  license_file: 
+    - LICENSE.rst 
+    - licenses 
+
   license_family: BSD
   summary: Observation planning package for astronomers
   description: |
