@@ -1,0 +1,11 @@
+--- astroplan-0.5.orig/setup.cfg	2017-10-23 23:42:38.000000000 -0200
++++ astroplan-0.5/setup.cfg	2019-11-20 15:43:10.285351477 -0300
+@@ -13,7 +13,7 @@
+ doctest_plus = enabled
+ 
+ [ah_bootstrap]
+-auto_use = True
++auto_use = False
+ 
+ [metadata]
+ package_name = astroplan

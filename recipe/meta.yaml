@@ -1,29 +1,26 @@
-{% set name = "astroplan" %}
-{% set version = "0.6" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "dd76407d372dceb3a1668353f2d8806e203e83e6930924c92decee1a9744a757" %}
+{% set version = "0.5" %}
 
 package:
-  name: '{{ name|lower }}'
-  version: '{{ version }}'
+  name: astroplan
+  version: {{ version }}
 
 source:
-  fn: '{{ name }}-{{ version }}.tar.gz'
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  '{{ hash_type }}': '{{ hash_value }}'
+  url: https://pypi.io/packages/source/a/astroplan/astroplan-{{ version }}.tar.gz
+  sha256: 431c4897a9b4ca072bee23db3c5f85bf30477449a00405c58fe2958d57700371
+  patches:
+    - do_not_download_astropy.patch
 
 build:
-  noarch: python
   number: 1
-  script: python setup.py install --offline --single-version-externally-managed --record=record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-  build:
-    - python >3
-    - setuptools
-    - astropy >=1.3
+  host:
+    - python
+    - pip
+    - astropy-helpers
   run:
-    - python >3
+    - python
     - numpy >=1.6
     - astropy >=1.3
     - pytz
@@ -36,9 +33,8 @@ test:
 
 about:
   home: https://github.com/astropy/astroplan
-  license: BSD 3-clause
-  license_file:
-    - LICENSE.rst
+  license: BSD-3-Clause
+  license_file: LICENSE.rst
 
   license_family: BSD
   summary: Observation planning package for astronomers
