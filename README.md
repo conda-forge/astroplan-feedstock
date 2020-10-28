@@ -5,9 +5,13 @@ Home: https://github.com/astropy/astroplan
 
 Package license: BSD 3-clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/astroplan-feedstock/blob/master/LICENSE.txt)
 
 Summary: Observation planning package for astronomers
+
+Development: https://github.com/astropy/astroplan
+
+Documentation: https://astroplan.readthedocs.io/
 
 astroplan is an observation planning package for astronomers that can help
 you plan for everything but the clouds. It is an in-development Astropy
