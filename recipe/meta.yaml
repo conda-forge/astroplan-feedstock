@@ -1,5 +1,5 @@
 {% set name = "astroplan" %}
-{% set version = "0.7" %}
+{% set version = "0.8" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: df4db93467e7f842952b4afeb1d584e89a0a70e99ec4e0aeed389747a7c069ae
+  sha256: 0cc463474e034f5f58f7399ef830ff60e91d2fac32e89cf2224e1de50946bdc7
 
 build:
   noarch: python
@@ -16,7 +16,7 @@ build:
   script: python setup.py install --offline --single-version-externally-managed --record=record.txt
 
 requirements:
-  build:
+  host:
     - python >3
     - setuptools
     - astropy >=1.3
