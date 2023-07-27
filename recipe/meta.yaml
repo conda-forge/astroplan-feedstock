@@ -1,5 +1,5 @@
 {% set name = "astroplan" %}
-{% set version = "0.8" %}
+{% set version = "0.9" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0cc463474e034f5f58f7399ef830ff60e91d2fac32e89cf2224e1de50946bdc7
+  sha256: 257d3026ac0c66fadf0878d03b0585416b1c0af48bba39761df297a07d124ae8
 
 build:
   noarch: python
