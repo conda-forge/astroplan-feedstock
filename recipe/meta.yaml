@@ -7,12 +7,12 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 39d97c3377e1630abff3a94d8c956980f77a3e809e27a0376dd7d30abe3b6959
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -23,7 +23,7 @@ requirements:
   run:
     - python >=3.7
     - numpy >=1.17
-    - astropy >=4
+    - astropy-base >=4
     - pytz
     - six
     - matplotlib-base
